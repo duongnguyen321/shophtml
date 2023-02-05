@@ -1,16 +1,4 @@
 var myFullpage = new fullpage("#main", {
-    sectionsColor: [
-        "#fefefe",
-        "#fefefe",
-        "#fefefe",
-        "#fefefe", 
-        "#fefefe",
-        "#fefefe",
-        "#fefefe",
-        "#fefefe",
-        "fefefe",
-        "#fefefe",
-    ],
     anchors: ['banner', 'categories', 'products', 'discount', 'best-sells', 'top-trending', 'download-app', 'benefits', 'infomation'],
     menu: "#header",
     continuousVertical: true,
