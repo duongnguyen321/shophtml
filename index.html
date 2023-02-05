@@ -22,10 +22,10 @@
     <title>Shop</title>
   </head>
   <body>
-    <header class="header" id="#header">
+    <header class="header" id="header">
       <div class="header_top">
         <div class="header_top-logo">
-          <a href="#banner">
+          <a href="#home">
             <img
               src="Assets/Images/logo/logo.svg"
               class="header_logo-img"
@@ -79,8 +79,12 @@
                 <p>My cart</p>
                 <span class="price">$21</span>
               </div>
-              <img src="Assets/SVG/dropdown.svg" alt="dropdown"width="18px"
-            height="18px" />
+              <img
+                src="Assets/SVG/dropdown.svg"
+                alt="dropdown"
+                width="18px"
+                height="18px"
+              />
             </a>
           </div>
         </div>
@@ -101,11 +105,69 @@
           />
         </div>
       </div>
-      <div class="header_bottom"></div>
+      <div class="header_bottom">
+        <button class="all_categories">
+          <a href="#categories">
+            <img
+              src="Assets/SVG/categories.svg"
+              alt="categories"
+              width="24px"
+              height="24px"
+            />
+            Brows All Categories
+          </a>
+        </button>
+        <nav class="navigation">
+          <ul id="navigation_list" class="navigation_list">
+            <li data-menuanchor="home" class="navigation_list-item">
+              <a href="#home">
+                <i class="bi bi-house-fill"></i>
+                Home</a
+              >
+            </li>
+            <li data-menuanchor="products" class="navigation_list-item">
+              <a href="#products">
+                <i class="bi bi-megaphone-fill"></i>
+                Sản phẩm mới</a
+              >
+            </li>
+            <li data-menuanchor="promotions" class="navigation_list-item">
+              <a href="#promotions">
+                <i class="bi bi-percent"></i>
+                Giảm giá</a
+              >
+            </li>
+            <li data-menuanchor="hot-deals" class="navigation_list-item">
+              <a href="#hot-deals">
+                <i class="bi bi-fire"></i>
+                Ưu đãi</a
+              >
+            </li>
+            <li data-menuanchor="top-products" class="navigation_list-item">
+              <a href="#top-products">
+                <i class="bi bi-award-fill"></i>
+                Sản phẩm hàng đầu</a
+              >
+            </li>
+            <li data-menuanchor="benefits" class="navigation_list-item">
+              <a href="#benefits">
+                <i class="bi bi-emoji-laughing"></i>
+                Lợi ích</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="support-center">
+          <a class="support-phone" href="tel:0986921104"
+            ><i class="bi bi-telephone"></i>0986921104</a
+          >
+          <p class="support-desc">Hỗ trợ 24/7</p>
+        </div>
+      </div>
     </header>
     <main class="main" id="main">
       <section class="section" id="section">
-        <div class="container"><h1>Banner</h1></div>
+        <div class="container"><h1>home</h1></div>
       </section>
       <section class="section" id="section">
         <div class="container"><h1>Categories</h1></div>
@@ -114,16 +176,13 @@
         <div class="container"><h1>Products</h1></div>
       </section>
       <section class="section" id="section">
-        <div class="container"><h1>Discount</h1></div>
+        <div class="container"><h1>Promotions</h1></div>
       </section>
       <section class="section" id="section">
-        <div class="container"><h1>Best Sells</h1></div>
+        <div class="container"><h1>Hot deals</h1></div>
       </section>
       <section class="section" id="section">
-        <div class="container"><h1>Top Trending</h1></div>
-      </section>
-      <section class="section" id="section">
-        <div class="container"><h1>Download App</h1></div>
+        <div class="container"><h1>Top products</h1></div>
       </section>
       <section class="section" id="section">
         <div class="container"><h1>Benefits</h1></div>

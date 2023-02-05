@@ -1,10 +1,10 @@
 var myFullpage = new fullpage("#main", {
-    anchors: ['banner', 'categories', 'products', 'discount', 'best-sells', 'top-trending', 'download-app', 'benefits', 'infomation'],
-    menu: "#header",
+    anchors: ['home', 'categories', 'products', 'promotions', 'hot-deals', 'top-products', 'benefits', 'infomation'],
+    menu: "#navigation_list",
     continuousVertical: true,
     continuousHorizontal: true,
     navigation: true,
-    navigationTooltips: ['Trang chủ', 'Danh mục', 'Sản phẩm', 'Giảm giá', 'Sản phẩm bán chạy', 'Sản phẩm xu hướng', 'Tải ứng dụng', 'Lợi ích', 'Thông tin'],
+    navigationTooltips: ['Trang chủ', 'Danh mục', 'Sản phẩm', 'Khuyễn mại', 'Ưu đãi hấp dẫn', 'Sản phẩm hàng đầu', 'Lợi ích', 'Thông tin'],
     showActiveTooltip: true,
     afterLoad: function (origin, destination, direction, trigger) {
         // console.log("afterLoad: destination:" + destination.index);
