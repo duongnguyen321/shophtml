@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="Assets/Images/logo/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="lib/FullpageJs/dist/lib.css" />
+    <link rel="stylesheet" href="lib/BootstrapIcons/dist/lib.css" />
+    <link rel="stylesheet/less" href="Assets/Styles/Home.less" />
+    <script src="lib/Less/dist/lib.js"></script>
+    <script
+      type="text/javascript"
+      src="lib/FullpageJs/dist/lib.js"
+      defer
+    ></script>
+    <script type="text/javascript" src="Assets/Js/Home.js" defer></script>
+    <title>Shop</title>
+  </head>
+  <body>
+    <header class="header" id="#header">
+      <div class="header_top">
+        <div class="header_top-logo">
+          <a href="#banner">
+            <img
+              src="Assets/Images/logo/logo.svg"
+              class="header_logo-img"
+              alt="Logo"
+              class="logo"
+            />
+            <div class="header_logo-title">
+              <h1 class="header_title-title">Groceyish</h1>
+              <h2 class="header_title-subtitle">GROCERY</h2>
+            </div>
+          </a>
+        </div>
+        <form class="header_top-search">
+          <select class="header_search-select" id="header_search-select">
+            <option value="value1" id="option1">Categories 1</option>
+            <option value="value3" id="option2">Categories 2</option>
+            <option value="value3" id="option3">Categories 3</option>
+            <option value="all" id="optionAll" selected>All Categories</option>
+          </select>
+          <label for="header_searchBar">|</label>
+          <input
+            type="search"
+            name="search"
+            class="header_search-input"
+            id="header_searchBar"
+            placeholder="Search for items..."
+          />
+          <button class="header_searchBar-btn" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+        <div class="header_top-cart">
+          <div class="header_cart-wishlist">
+            <a href="#">
+              <div class="header_cart-logo">
+                <span class="quantity">4</span>
+                <i class="bi bi-heart"></i>
+              </div>
+              <div class="header_cart-info">
+                <p>Wishlist</p>
+              </div>
+            </a>
+          </div>
+          <div class="header_cart-cart">
+            <a href="#">
+              <div class="header_cart-logo">
+                <span class="quantity">1</span>
+                <i class="bi bi-cart"></i>
+              </div>
+              <div class="header_cart-info">
+                <p>My cart</p>
+                <span class="price">$21</span>
+              </div>
+              <img src="Assets/SVG/dropdown.svg" alt="dropdown"width="18px"
+            height="18px" />
+            </a>
+          </div>
+        </div>
+        <div class="header_top-profile">
+          <img
+            class="header_profile-avatar"
+            src="Assets/Images/avatar.jpg"
+            alt="avatar"
+            width="40px"
+            height="40px"
+          />
+          <h1 class="header_profile-name">Nguyễn Dương</h1>
+          <img
+            src="Assets/SVG/dropdown.svg"
+            alt="dropdown"
+            width="18px"
+            height="18px"
+          />
+        </div>
+      </div>
+      <div class="header_bottom"></div>
+    </header>
+    <main class="main" id="main">
+      <section class="section" id="section">
+        <div class="container"><h1>Banner</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Categories</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Products</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Discount</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Best Sells</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Top Trending</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Download App</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Benefits</h1></div>
+      </section>
+      <section class="section" id="section">
+        <div class="container"><h1>Infomation</h1></div>
+      </section>
+    </main>
+    <footer class="footer" id="#footer"></footer>
+  </body>
+</html>
