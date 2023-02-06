@@ -73,12 +73,12 @@ html.fp-enabled,
   border-style: solid;
 }
 .fp-arrow.fp-prev {
-  border-width: 38.5px 34px 38.5px 0;
-  border-color: transparent #fff transparent transparent;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent var(--seccond_color) transparent transparent;
 }
 .fp-arrow.fp-next {
-  border-width: 38.5px 0 38.5px 34px;
-  border-color: transparent transparent transparent #fff;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent var(--seccond_color);
 }
 .fp-notransition {
   -webkit-transition: none !important;
@@ -111,6 +111,8 @@ html.fp-enabled,
   margin: 0 auto !important;
 }
 .fp-slidesNav.fp-bottom {
+  display: flex;
+  justify-content: center;
   bottom: 17px;
 }
 .fp-slidesNav.fp-top {

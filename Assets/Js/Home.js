@@ -6,10 +6,11 @@ var myFullpage = new fullpage("#main", {
     navigation: true,
     navigationTooltips: ['Trang chủ', 'Danh mục', 'Sản phẩm', 'Khuyễn mại', 'Ưu đãi hấp dẫn', 'Sản phẩm hàng đầu', 'Lợi ích', 'Thông tin'],
     showActiveTooltip: true,
-    afterLoad: function (origin, destination, direction, trigger) {
-        // console.log("afterLoad: destination:" + destination.index);
-    },
-    onLeave: function (origin, destination, direction, trigger) {
-        // console.log("onLeave: destination:" + destination.index);
-    },
+    slidesNavigation: true,
 });
+const form = document.querySelectorAll("form")
+for (let i = 0; i < form.length; i++) {
+    form[i].addEventListener("submit", function (e) {
+        e.preventDefault()
+    })
+}

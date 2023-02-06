@@ -113,12 +113,18 @@ header {
       }
     }
     .header_top-search {
+      position: relative;
       width: 497px;
       height: 42px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      border-radius: 2px;
+      overflow: hidden;
+      gap: 4px;
+      background-color: var(--seccond_color);
       .header_search-select {
+        margin-left: 12px;
         width: 116px;
         height: 18px;
         font-size: 14px;
@@ -128,6 +134,7 @@ header {
         background-image: url(../SVG/dropdown.svg);
         background-position: right center;
         background-repeat: no-repeat;
+        background-color: inherit;
         option {
           background-color: var(--white_color);
           color: var(--primary_color);
@@ -145,8 +152,8 @@ header {
         font-weight: 550;
         padding-left: 4px;
         margin-top: 2px;
-        color: var(--black_color);
         caret-color: var(--primary_color);
+        background-color: inherit;
         &::placeholder {
           color: var(--grey_color);
           font-weight: 500;
@@ -211,7 +218,6 @@ header {
               font-weight: 500;
             }
             i {
-              color: var(--black_color);
               font-size: 24px;
             }
           }
@@ -259,7 +265,6 @@ header {
               font-weight: 500;
             }
             i {
-              color: var(--black_color);
               font-size: 24px;
             }
           }
@@ -296,7 +301,6 @@ header {
         overflow: hidden;
       }
       h1.header_profile-name {
-        color: var(--black_color);
         font-size: 16px;
         font-weight: 600;
       }
@@ -398,12 +402,52 @@ header {
 main {
   width: 100%;
   section {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     padding-top: 150px;
     .container {
+      position: relative;
+      height: calc(100vh - 150px);
       width: 1440px;
+    }
+    &.home .container {
+      background: url(../../Assets/Images/home/background.png) no-repeat center
+        center;
+      background-size: cover;
+      .slide {
+        justify-content: flex-start;
+        .home_container-bg {
+          height: 50%;
+          position: absolute;
+          right: 0;
+        }
+        .home_container-bg.bot {
+          height: 50%;
+          position: absolute;
+          transform: scaleY(-1);
+          transform: rotate(180deg);
+          left: 0;
+          bottom: 0;
+        }
+        h1.home_container-title {
+          width: 532px;
+          height: 138px;
+          font-weight: 700;
+          font-size: 55px;
+          line-height: 69px;
+          letter-spacing: -0.01em;
+        }
+        p.home_container-subtitle {
+          width: 348px;
+          height: 25px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 25px;
+          letter-spacing: -0.01em;
+          color: var(--grey_color);
+        }
+      }
     }
   }
 }
