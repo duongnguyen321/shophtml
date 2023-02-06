@@ -10,26 +10,26 @@
     />
     <meta name="robots" content="index,follow" />
     <meta name="revisit-after" content="7 days" />
-    <meta name="google-site-verification" content="pZg_mfkRU3ZtZJU_LzvJeCaWXmLyzkOsZDRukoD66zQ" />
+    <meta
+      name="google-site-verification"
+      content="pZg_mfkRU3ZtZJU_LzvJeCaWXmLyzkOsZDRukoD66zQ"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
       href="Assets/Images/logo/logo.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="lib/Loading/dist/lib.css" />
     <link rel="stylesheet" href="lib/FullpageJs/dist/lib.css" />
     <link rel="stylesheet" href="lib/BootstrapIcons/dist/lib.css" />
     <link rel="stylesheet/less" href="Assets/Styles/Home.less" />
-    <script src="lib/Less/dist/lib.js"></script>
-    <script
-      type="text/javascript"
-      src="lib/FullpageJs/dist/lib.js"
-      defer
-    ></script>
-    <script type="text/javascript" src="Assets/Js/Home.js" defer></script>
     <title>Shop</title>
   </head>
   <body>
+    <div class="loading active" id="loading">
+      <div class="loader"></div>
+    </div>
     <header class="header" id="header">
       <div class="header_top">
         <div class="header_top-logo">
@@ -99,7 +99,7 @@
         <div class="header_top-profile">
           <img
             class="header_profile-avatar"
-            src="Assets/Images/avatar.jpg"
+            src="Assets/Images/avatar.webp"
             alt="avatar"
             width="40px"
             height="40px"
@@ -200,5 +200,9 @@
       </section>
     </main>
     <footer class="footer" id="#footer"></footer>
+    <script src="lib/Loading/dist/lib.js"></script>
+    <script src="lib/Less/dist/lib.js"></script>
+    <script src="lib/FullpageJs/dist/lib.js"></script>
+    <script src="Assets/Js/Home.js"></script>
   </body>
 </html>
