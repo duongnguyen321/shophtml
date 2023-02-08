@@ -73,11 +73,11 @@ html.fp-enabled,
   border-style: solid;
 }
 .fp-arrow.fp-prev {
-  border-width: 20px 20px 20px 0;
+  border-width: 25px 25px 25px 0;
   border-color: transparent var(--seccond_color) transparent transparent;
 }
 .fp-arrow.fp-next {
-  border-width: 20px 0 20px 20px;
+  border-width: 25px 0 25px 25px;
   border-color: transparent transparent transparent var(--seccond_color);
 }
 .fp-notransition {

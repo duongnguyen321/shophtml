@@ -63,7 +63,6 @@ header {
   background-color: var(--white_color);
   overflow: hidden;
   position: fixed;
-  z-index: 999;
   height: 150px;
   top: 0;
   width: 100%;
@@ -401,15 +400,16 @@ header {
 }
 main {
   width: 100%;
+  height: auto;
   section {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    padding-top: 150px;
+    height: 100vh;
     .container {
       position: relative;
-      height: calc(100vh - 150px);
       width: 1440px;
+      height: 100%;
     }
     &.home .container {
       background: url(../../Assets/Images/home/background.png) no-repeat center
@@ -423,14 +423,6 @@ main {
           position: absolute;
           right: 0;
         }
-        .home_container-bg.bot {
-          height: 50%;
-          position: absolute;
-          transform: scaleY(-1);
-          transform: rotate(180deg);
-          left: 0;
-          bottom: 0;
-        }
         h1.home_container-title {
           width: 532px;
           height: 138px;
@@ -438,6 +430,9 @@ main {
           font-size: 55px;
           line-height: 69px;
           letter-spacing: -0.01em;
+          position: absolute;
+          top: 89px;
+          left: 118px;
         }
         p.home_container-subtitle {
           width: 348px;
@@ -447,6 +442,66 @@ main {
           line-height: 25px;
           letter-spacing: -0.01em;
           color: var(--grey_color);
+          position: absolute;
+          top: 256px;
+          left: 118px;
+        }
+        form.home_container-form {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          position: absolute;
+          width: 437px;
+          height: 52px;
+          left: 121px;
+          top: 335px;
+          padding: 0px;
+          background: var(--white_color);
+          border-radius: 2px;
+          overflow: hidden;
+          label {
+            width: 34px;
+            height: 100%;
+            font-size: 16px;
+            margin: 12px;
+            color: var(--grey_color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+              font-size: 18px;
+              color: var(--primary_color);
+              margin-right: 8px;
+            }
+          }
+          input.home_form-input {
+            width: 287px;
+            height: 100%;
+            padding: 8px;
+            padding-left: 0;
+            font-size: 16px;
+            font-weight: 550;
+            caret-color: var(--primary_color);
+            background-color: inherit;
+            &::placeholder {
+              color: var(--grey_color);
+              font-weight: 500;
+            }
+            &::first-letter {
+              text-transform: uppercase;
+            }
+          }
+          button.home_form-btn {
+            height: 100%;
+            width: 93px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 14px;
+            gap: 9px;
+            background: var(--primary_color);
+          }
         }
       }
     }
