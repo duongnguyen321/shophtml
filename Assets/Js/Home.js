@@ -3,14 +3,13 @@ var myFullpage = new fullpage("#main", {
     menu: "#navigation_list",
     continuousVertical: true,
     continuousHorizontal: true,
-    navigation: true,
+    navigation: window.innerWidth >= 1680,
     navigationTooltips: ['Trang chủ', 'Danh mục', 'Sản phẩm', 'Khuyễn mại', 'Ưu đãi hấp dẫn', 'Sản phẩm hàng đầu', 'Lợi ích', 'Thông tin'],
     showActiveTooltip: true,
     slidesNavigation: true,
     paddingTop: "150px",
     fixedElements: "#header",
     recordHistory: false,
-    offsetSections: true,
 });
 const form = document.querySelectorAll("form")
 for (let i = 0; i < form.length; i++) {

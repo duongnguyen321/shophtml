@@ -74,11 +74,11 @@ html.fp-enabled,
 }
 .fp-arrow.fp-prev {
   border-width: 25px 25px 25px 0;
-  border-color: transparent var(--seccond_color) transparent transparent;
+  border-color: transparent #fff transparent transparent;
 }
 .fp-arrow.fp-next {
   border-width: 25px 0 25px 25px;
-  border-color: transparent transparent transparent var(--seccond_color);
+  border-color: transparent transparent transparent #fff;
 }
 .fp-notransition {
   -webkit-transition: none !important;
