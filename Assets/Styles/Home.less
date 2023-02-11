@@ -773,5 +773,90 @@ main {
         bottom: 8px;
       }
     }
+    &.promotions .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      .promotions_offer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 590px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 4px;
+        padding: 34px 48px;
+        &.offer_left {
+          background: url(../../Assets/Images/promotions/offer_bg1.png);
+        }
+        &.offer_right {
+          background: url(../../Assets/Images/promotions/offer_bg2.png);
+        }
+        p.promotions_offer-info {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 7px;
+          width: 86px;
+          height: 26px;
+          font-weight: 500;
+          border-radius: 3px;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: -0.01em;
+          color: var(--white_color);
+          text-align: center;
+          &.offer_left {
+            background: #ffd480;
+          }
+          &.offer_right {
+            background: var(--primary_color);
+          }
+        }
+        h1.promotions_offer-title {
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 35px;
+          color: var(--black_color);
+        }
+        p.promotions_offer-desc {
+          width: 255px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: -0.01em;
+          color: #838383;
+        }
+        button.promotions_offer-btn {
+          background-color: var(--primary_color);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 14px;
+          gap: 9px;
+          width: 143px;
+          height: 52px;
+          border-radius: 0px 2px 2px 0px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: var(--white_color);
+        }
+        img.promotions_offer-img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          &.offer_left {
+            right: 6px;
+          }
+        }
+      }
+    }
   }
 }
