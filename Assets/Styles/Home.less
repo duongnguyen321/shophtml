@@ -5,6 +5,8 @@
   --grey_color: #adadad;
   --black_color: #253d4e;
   --white_color: #fefefe;
+  --yellow_color: #ffd480;
+  --red_color: #f35244;
 }
 * {
   margin: 0;
@@ -20,7 +22,6 @@
 }
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 li {
   list-style: none;
@@ -49,7 +50,6 @@ input {
   border: none;
   outline: none;
 }
-
 .fp-arrow {
   border: none;
   width: 46px;
@@ -573,6 +573,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 40px;
         h1.categories_title {
           padding-left: 74px;
           width: 100%;
@@ -671,6 +672,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 40px;
         h1.products_title {
           width: 100%;
           padding-left: 74px;
@@ -868,7 +870,7 @@ main {
           color: var(--white_color);
           text-align: center;
           &.offer_left {
-            background: #ffd480;
+            background:var(--yellow_color);
           }
           &.offer_right {
             background: var(--primary_color);
