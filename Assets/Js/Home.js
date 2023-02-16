@@ -11,39 +11,24 @@ var myFullpage = new fullpage("#main", {
     fixedElements: "#header",
     recordHistory: false,
 });
-const form = document.querySelectorAll("form")
-for (let i = 0; i < form.length; i++) {
-    form[i].addEventListener("submit", function (e) {
-        e.preventDefault()
-    })
-}
-const toggleClassItem = (item, classname) => {
-    if (item !== null) {
-        item.classList.toggle(classname);
-    }
+const $$ = (selector) => document.querySelectorAll(selector);
+const $ = (selector) => document.querySelector(selector);
+$$("form").forEach((form) => form.addEventListener("submit", (e) => e.preventDefault()));
+const toggleClass = (element, classname) => element?.classList.toggle(classname);
+const addActiveMenu = (items, activeItems) => {
+    items.forEach((item) => item.addEventListener("click", () => {
+        activeItems.forEach((activeItem) => activeItem !== item && toggleClass(activeItem, "active"));
+        toggleClass(item, "active");
+        activeItems = [item];
+    }));
 };
-const addActiveMenu = (item, itemActive) => {
-    item.forEach(element => {
-        element.addEventListener("click", () => {
-            itemActive.forEach(active => {
-                if (active !== element) {
-                    toggleClassItem(active, "active");
-                }
-            });
-            toggleClassItem(element, "active");
-            itemActive = [element];
-        });
-    });
+const getSoldRatio = (itemSold) => {
+    const [sold, total] = itemSold.textContent.split(": ")[1].split("/");
+    return (sold / total) * 100;
 };
-addActiveMenu(
-    document.querySelectorAll(".categories_list-item"),
-    document.querySelectorAll(".categories_list-item.active")
-);
-addActiveMenu(
-    document.querySelectorAll(".products_list-item"),
-    document.querySelectorAll(".products_list-item.active")
-);
-addActiveMenu(
-    document.querySelectorAll(".hot-deals_list-item"),
-    document.querySelectorAll(".hot-deals_list-item.active")
-);
+addActiveMenu($$(".categories_list-item"), $$(".categories_list-item.active"));
+addActiveMenu($$(".products_list-item"), $$(".products_list-item.active"));
+addActiveMenu($$(".hot-deals_list-item"), $$(".hot-deals_list-item.active"));
+$$(".hot-deals_item-sold").forEach((itemSold, index) => {
+    $$(".hot-deals_item-range-value")[index].style.width = `${getSoldRatio(itemSold)}%`;
+});
