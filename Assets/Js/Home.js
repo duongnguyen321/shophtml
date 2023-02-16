@@ -7,31 +7,43 @@ var myFullpage = new fullpage("#main", {
     navigationTooltips: ['Trang chủ', 'Danh mục', 'Sản phẩm', 'Khuyễn mại', 'Ưu đãi hấp dẫn', 'Sản phẩm hàng đầu', 'Lợi ích', 'Thông tin'],
     showActiveTooltip: true,
     slidesNavigation: true,
-    paddingTop: "150px",
+    paddingTop: "158px",
     fixedElements: "#header",
     recordHistory: false,
 });
-
 const form = document.querySelectorAll("form")
 for (let i = 0; i < form.length; i++) {
     form[i].addEventListener("submit", function (e) {
         e.preventDefault()
     })
 }
-const removeClassItem = (item, classname) => {
+const toggleClassItem = (item, classname) => {
     if (item !== null) {
-        item.classList.remove(classname);
+        item.classList.toggle(classname);
     }
-}
-const addClassItem = (item, classname) => {
-    if (item !== null) {
-        item.classList.add(classname);
-    }
-}
-const categories_list_item = document.querySelectorAll(".categories_list-item")
-for (let i = 0; i < categories_list_item.length; i++) {
-    categories_list_item[i].addEventListener("click", () => {
-        removeClassItem(document.querySelector('.categories_list-item.active'), "active")
-        addClassItem(categories_list_item[i], "active")
-    })
-}
+};
+const addActiveMenu = (item, itemActive) => {
+    item.forEach(element => {
+        element.addEventListener("click", () => {
+            itemActive.forEach(active => {
+                if (active !== element) {
+                    toggleClassItem(active, "active");
+                }
+            });
+            toggleClassItem(element, "active");
+            itemActive = [element];
+        });
+    });
+};
+addActiveMenu(
+    document.querySelectorAll(".categories_list-item"),
+    document.querySelectorAll(".categories_list-item.active")
+);
+addActiveMenu(
+    document.querySelectorAll(".products_list-item"),
+    document.querySelectorAll(".products_list-item.active")
+);
+addActiveMenu(
+    document.querySelectorAll(".hot-deals_list-item"),
+    document.querySelectorAll(".hot-deals_list-item.active")
+);
